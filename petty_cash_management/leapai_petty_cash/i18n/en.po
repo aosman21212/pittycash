@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * petty_cash_management
+# * leapai_petty_cash
 #
 msgid ""
 msgstr ""
@@ -14,302 +14,302 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Petty Cash Management"
 msgstr "Petty Cash Management"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Petty Cash Fund"
 msgstr "Petty Cash Fund"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Fund Name"
 msgstr "Fund Name"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Employee"
 msgstr "Employee"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Cash Account"
 msgstr "Cash Account"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Cash Journal"
 msgstr "Cash Journal"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Initial Balance"
 msgstr "Initial Balance"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Current Balance"
 msgstr "Current Balance"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Currency"
 msgstr "Currency"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Status"
 msgstr "Status"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Active"
 msgstr "Active"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Inactive"
 msgstr "Inactive"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Requests"
 msgstr "Requests"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Transactions"
 msgstr "Transactions"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Notes"
 msgstr "Notes"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Setup Fund"
 msgstr "Setup Fund"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Fund Setup Complete"
 msgstr "Fund Setup Complete"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Petty cash account and journal have been created successfully."
 msgstr "Petty cash account and journal have been created successfully."
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Initial Balance"
 msgstr "Initial Balance"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Petty Cash Request"
 msgstr "Petty Cash Request"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Reference"
 msgstr "Reference"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Request Date"
 msgstr "Request Date"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Amount"
 msgstr "Amount"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Purpose / Reason"
 msgstr "Purpose / Reason"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Draft"
 msgstr "Draft"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Submitted"
 msgstr "Submitted"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Approved"
 msgstr "Approved"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Paid"
 msgstr "Paid"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Rejected"
 msgstr "Rejected"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Approved By"
 msgstr "Approved By"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Approval Date"
 msgstr "Approval Date"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Payment Date"
 msgstr "Payment Date"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Journal Entry"
 msgstr "Journal Entry"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Internal Notes"
 msgstr "Internal Notes"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Rejection Reason"
 msgstr "Rejection Reason"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Fund Balance"
 msgstr "Fund Balance"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Submit"
 msgstr "Submit"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Approve"
 msgstr "Approve"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Mark as Paid"
 msgstr "Mark as Paid"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Reject"
 msgstr "Reject"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Reset to Draft"
 msgstr "Reset to Draft"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Amount must be greater than zero."
 msgstr "Amount must be greater than zero."
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Please complete the fund setup first (create account and journal)."
 msgstr "Please complete the fund setup first (create account and journal)."
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Petty Cash Transaction"
 msgstr "Petty Cash Transaction"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Date"
 msgstr "Date"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Description"
 msgstr "Description"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Debit (In)"
 msgstr "Debit (In)"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Credit (Out)"
 msgstr "Credit (Out)"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Balance"
 msgstr "Balance"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Petty Cash Funds"
 msgstr "Petty Cash Funds"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Has Petty Cash Fund"
 msgstr "Has Petty Cash Fund"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Petty Cash Setup"
 msgstr "Petty Cash Setup"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Dashboard"
 msgstr "Dashboard"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "My Requests"
 msgstr "My Requests"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "All Requests"
 msgstr "All Requests"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Cash Funds"
 msgstr "Cash Funds"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Configuration"
 msgstr "Configuration"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Settings"
 msgstr "Settings"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 #. odoo-javascript
 msgid "Petty Cash Dashboard"
 msgstr "Petty Cash Dashboard"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 #. odoo-javascript
 msgid "Petty Cash Requests"
 msgstr "Petty Cash Requests"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 #. odoo-javascript
 msgid "Petty Cash Funds"
 msgstr "Petty Cash Funds"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 #. odoo-javascript
 msgid "Active Funds"
 msgstr "Active Funds"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 #. odoo-javascript
 msgid "Total Balance"
 msgstr "Total Balance"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 #. odoo-javascript
 msgid "Pending Approval"
 msgstr "Pending Approval"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 #. odoo-javascript
 msgid "Total Paid"
 msgstr "Total Paid"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 #. odoo-javascript
 msgid "Request Status"
 msgstr "Request Status"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 #. odoo-javascript
 msgid "This Month"
 msgstr "This Month"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 #. odoo-javascript
 msgid "Quick Actions"
 msgstr "Quick Actions"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 #. odoo-javascript
 msgid "Recent Requests"
 msgstr "Recent Requests"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 #. odoo-javascript
 msgid "Recent Transactions"
 msgstr "Recent Transactions"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Petty Cash / Manager"
 msgstr "Petty Cash / Manager"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Petty Cash / User"
 msgstr "Petty Cash / User"

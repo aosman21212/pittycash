@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <templates xml:space="preserve">
-    <t t-name="petty_cash_management.Dashboard">
+    <t t-name="leapai_petty_cash.Dashboard">
         <div class="o_petty_cash_dashboard">
             <!-- Loading Spinner -->
             <t t-if="state.loading">

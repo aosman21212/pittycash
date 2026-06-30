@@ -24,9 +24,9 @@
     ],
     'assets': {
         'web.assets_backend': [
-            'petty_cash_management/static/src/components/dashboard/dashboard.js',
-            'petty_cash_management/static/src/components/dashboard/dashboard.xml',
-            'petty_cash_management/static/src/components/dashboard/dashboard.scss',
+            'leapai_petty_cash/static/src/components/dashboard/dashboard.js',
+            'leapai_petty_cash/static/src/components/dashboard/dashboard.xml',
+            'leapai_petty_cash/static/src/components/dashboard/dashboard.scss',
         ],
     },
     'demo': ['demo/petty_cash_demo.xml'],

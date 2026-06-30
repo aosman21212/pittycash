@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_petty_cash_fund_manager,petty.cash.fund manager,model_petty_cash_fund,leapai_petty_cash.petty_cash_manager_group,1,1,1,1
+access_petty_cash_fund_user,petty.cash.fund user,model_petty_cash_fund,leapai_petty_cash.petty_cash_user_group,1,0,0,0
+access_petty_cash_request_manager,petty.cash.request manager,model_petty_cash_request,leapai_petty_cash.petty_cash_manager_group,1,1,1,1
+access_petty_cash_request_user,petty.cash.request user,model_petty_cash_request,leapai_petty_cash.petty_cash_user_group,1,1,1,0
+access_petty_cash_transaction_manager,petty.cash.transaction manager,model_petty_cash_transaction,leapai_petty_cash.petty_cash_manager_group,1,1,1,1
+access_petty_cash_transaction_user,petty.cash.transaction user,model_petty_cash_transaction,leapai_petty_cash.petty_cash_user_group,1,0,0,0
+access_petty_cash_reject_wizard_all,petty.cash.reject.wizard all,model_petty_cash_reject_wizard,base.group_user,1,1,1,1
+access_petty_cash_dashboard_all,petty.cash.dashboard all,model_petty_cash_dashboard,base.group_user,1,0,0,0

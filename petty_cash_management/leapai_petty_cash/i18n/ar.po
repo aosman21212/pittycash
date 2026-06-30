@@ -14,372 +14,372 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Petty Cash Management"
 msgstr "إدارة الصندوق النثري"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Petty Cash Fund"
 msgstr "صندوق النثريات"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Fund Name"
 msgstr "اسم الصندوق"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Employee"
 msgstr "الموظف"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Cash Account"
 msgstr "حساب النقد"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Cash Journal"
 msgstr "دفتر يومية النقد"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Initial Balance"
 msgstr "الرصيد الافتتاحي"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Current Balance"
 msgstr "الرصيد الحالي"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Currency"
 msgstr "العملة"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Status"
 msgstr "الحالة"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Active"
 msgstr "نشط"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Inactive"
 msgstr "غير نشط"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Requests"
 msgstr "الطلبات"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Transactions"
 msgstr "المعاملات"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Notes"
 msgstr "ملاحظات"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Setup Fund"
 msgstr "إعداد الصندوق"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Fund Setup Complete"
 msgstr "اكتمل إعداد الصندوق"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Petty cash account and journal have been created successfully."
 msgstr "تم إنشاء حساب النثريات ودفتر اليومية بنجاح."
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Petty Cash Request"
 msgstr "طلب صرف نثريات"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Reference"
 msgstr "المرجع"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Request Date"
 msgstr "تاريخ الطلب"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Amount"
 msgstr "المبلغ"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Purpose / Reason"
 msgstr "الغرض / السبب"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Draft"
 msgstr "مسودة"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Submitted"
 msgstr "مقدم"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Approved"
 msgstr "موافق عليه"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Paid"
 msgstr "مدفوع"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Rejected"
 msgstr "مرفوض"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Approved By"
 msgstr "تمت الموافقة بواسطة"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Approval Date"
 msgstr "تاريخ الموافقة"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Payment Date"
 msgstr "تاريخ الدفع"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Journal Entry"
 msgstr "قيد يومية"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Internal Notes"
 msgstr "ملاحظات داخلية"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Rejection Reason"
 msgstr "سبب الرفض"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Fund Balance"
 msgstr "رصيد الصندوق"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Submit"
 msgstr "تقديم"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Approve"
 msgstr "موافقة"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Mark as Paid"
 msgstr "تأشير كمدفوع"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Reject"
 msgstr "رفض"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Reset to Draft"
 msgstr "إعادة إلى مسودة"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Amount must be greater than zero."
 msgstr "يجب أن يكون المبلغ أكبر من الصفر."
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Please complete the fund setup first (create account and journal)."
 msgstr "يرجى إكمال إعداد الصندوق أولاً (إنشاء الحساب ودفتر اليومية)."
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Petty Cash Transaction"
 msgstr "معاملة نثريات"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Date"
 msgstr "التاريخ"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Description"
 msgstr "الوصف"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Debit (In)"
 msgstr "مدين (وارد)"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Credit (Out)"
 msgstr "دائن (صادر)"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Balance"
 msgstr "الرصيد"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Petty Cash Funds"
 msgstr "صناديق النثريات"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Has Petty Cash Fund"
 msgstr "لديه صندوق نثريات"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Petty Cash Setup"
 msgstr "إعداد النثريات"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Dashboard"
 msgstr "لوحة التحكم"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "My Requests"
 msgstr "طلباتي"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "All Requests"
 msgstr "جميع الطلبات"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Cash Funds"
 msgstr "الصناديق النقدية"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Configuration"
 msgstr "الإعدادات"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Settings"
 msgstr "الإعدادات"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Petty Cash"
 msgstr "النثريات"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 #. odoo-javascript
 msgid "Petty Cash Dashboard"
 msgstr "لوحة تحكم النثريات"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 #. odoo-javascript
 msgid "Petty Cash Requests"
 msgstr "طلبات النثريات"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 #. odoo-javascript
 msgid "Petty Cash Funds"
 msgstr "صناديق النثريات"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 #. odoo-javascript
 msgid "Active Funds"
 msgstr "الصناديق النشطة"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 #. odoo-javascript
 msgid "Total Balance"
 msgstr "إجمالي الرصيد"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 #. odoo-javascript
 msgid "Pending Approval"
 msgstr "في انتظار الموافقة"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 #. odoo-javascript
 msgid "Total Paid"
 msgstr "إجمالي المدفوع"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 #. odoo-javascript
 msgid "Request Status"
 msgstr "حالة الطلب"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 #. odoo-javascript
 msgid "This Month"
 msgstr "هذا الشهر"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 #. odoo-javascript
 msgid "Quick Actions"
 msgstr "إجراءات سريعة"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 #. odoo-javascript
 msgid "Recent Requests"
 msgstr "الطلبات الأخيرة"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 #. odoo-javascript
 msgid "Recent Transactions"
 msgstr "المعاملات الأخيرة"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 #. odoo-javascript
 msgid "New Request"
 msgstr "طلب جديد"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 #. odoo-javascript
 msgid "Manage Funds"
 msgstr "إدارة الصناديق"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 #. odoo-javascript
 msgid "Pending Approvals"
 msgstr "الموافقات المعلقة"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 #. odoo-javascript
 msgid "All Transactions"
 msgstr "جميع المعاملات"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 #. odoo-javascript
 msgid "View All"
 msgstr "عرض الكل"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 #. odoo-javascript
 msgid "Reference"
 msgstr "المرجع"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 #. odoo-javascript
 msgid "Date"
 msgstr "التاريخ"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 #. odoo-javascript
 msgid "Purpose"
 msgstr "الغرض"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 #. odoo-javascript
 msgid "Debit (In)"
 msgstr "مدين (وارد)"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 #. odoo-javascript
 msgid "Credit (Out)"
 msgstr "دائن (صادر)"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Petty Cash / Manager"
 msgstr "النثريات / مدير"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Petty Cash / User"
 msgstr "النثريات / مستخدم"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Reject Petty Cash Request"
 msgstr "رفض طلب النثريات"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Request"
 msgstr "الطلب"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Rejection Reason"
 msgstr "سبب الرفض"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Reject Request"
 msgstr "رفض الطلب"
 
-#. module: petty_cash_management
+#. module: leapai_petty_cash
 msgid "Cancel"
 msgstr "إلغاء"
