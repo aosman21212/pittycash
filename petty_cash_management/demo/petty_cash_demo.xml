@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Demo Petty Cash Funds -->
+    <record id="demo_petty_cash_fund_1" model="petty.cash.fund">
+        <field name="name">Petty Cash - Office Operations</field>
+        <field name="employee_id" ref="hr.employee_al"/>
+        <field name="initial_balance">500.00</field>
+        <field name="state">active</field>
+        <field name="notes">Main office petty cash for daily expenses.</field>
+    </record>
+
+    <record id="demo_petty_cash_fund_2" model="petty.cash.fund">
+        <field name="name">Petty Cash - Sales Team</field>
+        <field name="employee_id" ref="hr.employee_hne"/>
+        <field name="initial_balance">1000.00</field>
+        <field name="state">active</field>
+        <field name="notes">Sales team travel and entertainment expenses.</field>
+    </record>
+
+    <!-- Demo Requests -->
+    <record id="demo_petty_cash_request_1" model="petty.cash.request">
+        <field name="employee_id" ref="hr.employee_al"/>
+        <field name="fund_id" ref="demo_petty_cash_fund_1"/>
+        <field name="date" eval="(DateTime.now() - timedelta(days=5)).strftime('%Y-%m-%d')"/>
+        <field name="amount">75.50</field>
+        <field name="reason">Office supplies - pens, paper, and stapler for meeting room</field>
+        <field name="state">paid</field>
+        <field name="notes">Purchased from local store.</field>
+    </record>
+
+    <record id="demo_petty_cash_request_2" model="petty.cash.request">
+        <field name="employee_id" ref="hr.employee_hne"/>
+        <field name="fund_id" ref="demo_petty_cash_fund_2"/>
+        <field name="date" eval="(DateTime.now() - timedelta(days=2)).strftime('%Y-%m-%d')"/>
+        <field name="amount">120.00</field>
+        <field name="reason">Client lunch meeting - entertainment expense for new client</field>
+        <field name="state">approved</field>
+    </record>
+
+    <record id="demo_petty_cash_request_3" model="petty.cash.request">
+        <field name="employee_id" ref="hr.employee_al"/>
+        <field name="fund_id" ref="demo_petty_cash_fund_1"/>
+        <field name="date" eval="DateTime.now().strftime('%Y-%m-%d')"/>
+        <field name="amount">45.00</field>
+        <field name="reason">Courier / delivery charges for urgent document</field>
+        <field name="state">submitted</field>
+    </record>
+
+    <record id="demo_petty_cash_request_4" model="petty.cash.request">
+        <field name="employee_id" ref="hr.employee_hne"/>
+        <field name="fund_id" ref="demo_petty_cash_fund_2"/>
+        <field name="date" eval="DateTime.now().strftime('%Y-%m-%d')"/>
+        <field name="amount">200.00</field>
+        <field name="reason">Conference registration fees for industry event</field>
+        <field name="state">draft</field>
+    </record>
+</odoo>

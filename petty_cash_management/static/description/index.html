@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Petty Cash Management | LeapAI</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; color: #333; background: #fff; }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #714B67 0%, #4A2F47 100%);
+            color: white;
+            padding: 48px 40px;
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+        .hero img.icon { width: 80px; height: 80px; border-radius: 16px; background: rgba(255,255,255,0.15); padding: 8px; }
+        .hero h1 { font-size: 32px; font-weight: 800; margin-bottom: 8px; }
+        .hero p  { font-size: 15px; opacity: 0.9; max-width: 600px; line-height: 1.6; }
+        .hero .badges { display: flex; gap: 10px; margin-top: 16px; flex-wrap: wrap; }
+        .badge-pill {
+            background: rgba(255,255,255,0.18);
+            border: 1px solid rgba(255,255,255,0.35);
+            color: white;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        /* Content */
+        .content { max-width: 960px; margin: 0 auto; padding: 40px 30px; }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #714B67;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #f0e8ef;
+        }
+
+        /* Features grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .feature-card {
+            border: 1px solid #e8d5e4;
+            border-radius: 10px;
+            padding: 22px;
+            background: #fdf9fc;
+        }
+        .feature-card .icon {
+            font-size: 30px;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .feature-card h3 {
+            font-size: 15px;
+            font-weight: 700;
+            color: #4A2F47;
+            margin-bottom: 8px;
+        }
+        .feature-card p {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Workflow steps */
+        .workflow { margin-bottom: 40px; }
+        .steps {
+            display: flex;
+            gap: 0;
+            align-items: stretch;
+            flex-wrap: wrap;
+        }
+        .step {
+            flex: 1;
+            min-width: 140px;
+            text-align: center;
+            padding: 20px 14px;
+            background: #fdf9fc;
+            border: 1px solid #e8d5e4;
+            position: relative;
+        }
+        .step:not(:last-child)::after {
+            content: '→';
+            position: absolute;
+            right: -14px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 18px;
+            color: #714B67;
+            z-index: 1;
+        }
+        .step-num {
+            background: #714B67;
+            color: white;
+            width: 28px; height: 28px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 13px; font-weight: 700;
+            margin: 0 auto 8px;
+        }
+        .step h4 { font-size: 13px; font-weight: 700; color: #4A2F47; margin-bottom: 4px; }
+        .step p  { font-size: 11px; color: #888; }
+
+        /* Table */
+        table { width: 100%; border-collapse: collapse; margin-bottom: 40px; font-size: 13px; }
+        th { background: #714B67; color: white; padding: 10px 14px; text-align: left; }
+        td { padding: 9px 14px; border-bottom: 1px solid #eee; }
+        tr:nth-child(even) td { background: #fdf9fc; }
+
+        /* Check marks */
+        .check { color: #28a745; font-weight: 700; }
+
+        /* Screenshot */
+        .screenshot-section { margin-bottom: 48px; }
+        .screenshot-section img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+            border: 1px solid #e0d8e0;
+            display: block;
+        }
+        .screenshot-caption {
+            text-align: center;
+            font-size: 13px;
+            color: #888;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        /* Footer */
+        .footer {
+            background: #f5f5f5;
+            text-align: center;
+            padding: 24px;
+            font-size: 12px;
+            color: #999;
+            border-top: 1px solid #eee;
+        }
+        .footer strong { color: #714B67; }
+    </style>
+</head>
+<body>
+
+<!-- Hero -->
+<div class="hero">
+    <img class="icon" src="icon.png" alt="Petty Cash Management"/>
+    <div>
+        <h1>Petty Cash Management</h1>
+        <p>A complete petty cash solution for Odoo 19 — manage employee cash funds, track requests through a structured approval workflow, and maintain full accounting integration with automatic journal entries.</p>
+        <div class="badges">
+            <span class="badge-pill">Odoo 19.0</span>
+            <span class="badge-pill">Accounting</span>
+            <span class="badge-pill">HR Integration</span>
+            <span class="badge-pill">OWL Dashboard</span>
+            <span class="badge-pill">Arabic &amp; English</span>
+            <span class="badge-pill">LGPL-3</span>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+
+    <!-- Screenshot -->
+    <div class="screenshot-section" style="margin-top:40px">
+        <h2>📸 Module Preview</h2>
+        <img src="screenshot.png" alt="Petty Cash Management – Dashboard, Funds, Requests &amp; Transactions"/>
+        <p class="screenshot-caption">
+            OWL Dashboard with KPI cards · Request status breakdown · Fund amounts · Recent requests table with approval status
+        </p>
+    </div>
+
+    <!-- Features -->
+    <h2>Key Features</h2>
+    <div class="features-grid">
+        <div class="feature-card">
+            <span class="icon">&#x1F3E6;</span>
+            <h3>Employee Fund Setup</h3>
+            <p>Automatically create a dedicated cash account and journal for each employee's petty cash fund with a single click — no manual accounting configuration needed.</p>
+        </div>
+        <div class="feature-card">
+            <span class="icon">&#x1F4CB;</span>
+            <h3>Request Workflow</h3>
+            <p>Structured 4-step approval process: Draft → Submitted → Approved → Paid. Role-based access ensures only managers can approve or reject requests.</p>
+        </div>
+        <div class="feature-card">
+            <span class="icon">&#x1F4CA;</span>
+            <h3>Transaction Ledger</h3>
+            <p>Real-time running balance for every fund. Each transaction shows debit, credit, and cumulative balance with automatic updates when requests are approved.</p>
+        </div>
+        <div class="feature-card">
+            <span class="icon">&#x1F4B0;</span>
+            <h3>Full Accounting Integration</h3>
+            <p>Automatic journal entries on approval — debits the expense account and credits the petty cash account. Fully integrated with Odoo's double-entry accounting engine.</p>
+        </div>
+        <div class="feature-card">
+            <span class="icon">&#x1F5A5;&#xFE0F;</span>
+            <h3>OWL Dashboard</h3>
+            <p>Real-time KPI dashboard built with OWL showing total funds, balance, pending approvals, monthly spend, request status breakdown, and recent activity tables.</p>
+        </div>
+        <div class="feature-card">
+            <span class="icon">&#x1F4C4;</span>
+            <h3>PDF Reports</h3>
+            <p>Professional printable request reports with company header, full request details, approval information, and three signature lines (Requested / Approved / Paid).</p>
+        </div>
+        <div class="feature-card">
+            <span class="icon">&#x1F465;</span>
+            <h3>HR Employee Integration</h3>
+            <p>Petty cash funds appear directly on the employee form with a smart button showing fund count and a dedicated "Petty Cash" tab for fund management.</p>
+        </div>
+        <div class="feature-card">
+            <span class="icon">&#x1F310;</span>
+            <h3>Bilingual Support</h3>
+            <p>Complete Arabic and English translations for all field labels, button names, status labels, menu items, and dashboard strings — ready for Middle East deployments.</p>
+        </div>
+    </div>
+
+    <!-- Workflow -->
+    <h2>Request Workflow</h2>
+    <div class="workflow">
+        <div class="steps">
+            <div class="step">
+                <div class="step-num">1</div>
+                <h4>Draft</h4>
+                <p>Employee creates request with amount and reason</p>
+            </div>
+            <div class="step">
+                <div class="step-num">2</div>
+                <h4>Submitted</h4>
+                <p>Employee submits for manager review</p>
+            </div>
+            <div class="step">
+                <div class="step-num">3</div>
+                <h4>Approved</h4>
+                <p>Manager approves; journal entry created automatically</p>
+            </div>
+            <div class="step">
+                <div class="step-num">4</div>
+                <h4>Paid</h4>
+                <p>Cashier marks payment as completed</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Feature Table -->
+    <h2>Module Highlights</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Feature</th>
+                <th>Details</th>
+                <th>Included</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Petty Cash Funds</td>
+                <td>Per-employee funds with dedicated account &amp; journal</td>
+                <td class="check">&#x2713;</td>
+            </tr>
+            <tr>
+                <td>Approval Workflow</td>
+                <td>4-state workflow with role-based access control</td>
+                <td class="check">&#x2713;</td>
+            </tr>
+            <tr>
+                <td>Transaction Ledger</td>
+                <td>Running balance with debit/credit columns</td>
+                <td class="check">&#x2713;</td>
+            </tr>
+            <tr>
+                <td>Accounting Journal Entries</td>
+                <td>Auto-posted double-entry entries on approval</td>
+                <td class="check">&#x2713;</td>
+            </tr>
+            <tr>
+                <td>OWL Dashboard</td>
+                <td>KPI cards, status breakdown, recent activity</td>
+                <td class="check">&#x2713;</td>
+            </tr>
+            <tr>
+                <td>PDF Report</td>
+                <td>Printable request form with signature lines</td>
+                <td class="check">&#x2713;</td>
+            </tr>
+            <tr>
+                <td>HR Integration</td>
+                <td>Smart button &amp; tab on employee form</td>
+                <td class="check">&#x2713;</td>
+            </tr>
+            <tr>
+                <td>Multi-currency</td>
+                <td>Per-fund currency support</td>
+                <td class="check">&#x2713;</td>
+            </tr>
+            <tr>
+                <td>Multi-company</td>
+                <td>Isolated data per company</td>
+                <td class="check">&#x2713;</td>
+            </tr>
+            <tr>
+                <td>Arabic Translation</td>
+                <td>Full AR PO file including JS strings</td>
+                <td class="check">&#x2713;</td>
+            </tr>
+            <tr>
+                <td>Role-based Security</td>
+                <td>Manager and User groups with access rules</td>
+                <td class="check">&#x2713;</td>
+            </tr>
+            <tr>
+                <td>Demo Data</td>
+                <td>2 funds and 4 sample requests</td>
+                <td class="check">&#x2713;</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Technical Info -->
+    <h2>Technical Information</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Module Name</td><td>petty_cash_management</td></tr>
+            <tr><td>Version</td><td>19.0.1.0.0</td></tr>
+            <tr><td>Odoo Version</td><td>19.0</td></tr>
+            <tr><td>Dependencies</td><td>account, hr, mail</td></tr>
+            <tr><td>License</td><td>LGPL-3</td></tr>
+            <tr><td>Author</td><td>LeapAI</td></tr>
+            <tr><td>Frontend Framework</td><td>OWL 2 (Odoo Web Library)</td></tr>
+            <tr><td>Languages</td><td>English, Arabic</td></tr>
+        </tbody>
+    </table>
+
+</div>
+
+<div class="footer">
+    Developed by <strong>LeapAI</strong> &mdash; <a href="https://leapai.com" style="color: #714B67;">leapai.com</a><br/>
+    Petty Cash Management v19.0.1.0.0 &bull; Licensed under LGPL-3
+</div>
+</body>
+</html>

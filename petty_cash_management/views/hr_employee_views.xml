@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_hr_employee_form_petty_cash" model="ir.ui.view">
+        <field name="name">hr.employee.form.petty.cash</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <!-- Smart button -->
+            <div name="button_box" position="inside">
+                <button name="action_view_petty_cash" type="object"
+                    class="oe_stat_button" icon="fa-money"
+                    invisible="petty_cash_fund_count == 0">
+                    <field name="petty_cash_fund_count" widget="statinfo" string="Petty Cash"/>
+                </button>
+            </div>
+            <!-- Add tab in notebook -->
+            <page name="hr_settings" position="after">
+                <page string="Petty Cash" name="petty_cash">
+                    <group>
+                        <button name="action_petty_cash_setup" string="Setup Petty Cash Fund"
+                            type="object" class="btn-primary"
+                            invisible="has_petty_cash"/>
+                    </group>
+                    <field name="petty_cash_fund_ids" readonly="1">
+                        <list string="Petty Cash Funds">
+                            <field name="name"/>
+                            <field name="initial_balance" widget="monetary"/>
+                            <field name="current_balance" widget="monetary"/>
+                            <field name="currency_id" column_invisible="True"/>
+                            <field name="state" widget="badge"
+                                decoration-success="state == 'active'"
+                                decoration-danger="state == 'inactive'"/>
+                        </list>
+                    </field>
+                </page>
+            </page>
+        </field>
+    </record>
+</odoo>

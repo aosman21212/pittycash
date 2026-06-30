@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates xml:space="preserve">
+    <t t-name="petty_cash_management.Dashboard">
+        <div class="o_petty_cash_dashboard">
+            <!-- Loading Spinner -->
+            <t t-if="state.loading">
+                <div class="o_pcd_loading">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <p class="mt-3 text-muted">Loading dashboard data...</p>
+                </div>
+            </t>
+
+            <t t-else="">
+                <!-- Dashboard Header -->
+                <div class="o_pcd_header">
+                    <div class="o_pcd_header_left">
+                        <span class="o_pcd_header_icon">&#x1F4B0;</span>
+                        <div>
+                            <h1>Petty Cash Dashboard</h1>
+                            <p>Monitor funds, requests, and transactions at a glance</p>
+                        </div>
+                    </div>
+                    <button class="o_pcd_refresh_btn" t-on-click="() => this._loadData()">
+                        <i class="fa fa-refresh"/> Refresh
+                    </button>
+                </div>
+
+                <!-- KPI Cards Row -->
+                <div class="o_pcd_kpi_row">
+                    <!-- Total Active Funds -->
+                    <div class="o_pcd_kpi_card o_pcd_kpi_purple" t-on-click="() => this.openFunds([['state','=','active']])">
+                        <div class="o_pcd_kpi_icon">
+                            <i class="fa fa-bank"/>
+                        </div>
+                        <div class="o_pcd_kpi_content">
+                            <div class="o_pcd_kpi_value">
+                                <t t-esc="state.data.total_funds || 0"/>
+                            </div>
+                            <div class="o_pcd_kpi_label">Active Funds</div>
+                        </div>
+                    </div>
+
+                    <!-- Total Balance -->
+                    <div class="o_pcd_kpi_card o_pcd_kpi_green" t-on-click="() => this.openFunds([['state','=','active']])">
+                        <div class="o_pcd_kpi_icon">
+                            <i class="fa fa-money"/>
+                        </div>
+                        <div class="o_pcd_kpi_content">
+                            <div class="o_pcd_kpi_value o_pcd_amount">
+                                <t t-esc="this.formatAmount(state.data.total_balance, state.data.currency_symbol)"/>
+                            </div>
+                            <div class="o_pcd_kpi_label">Total Balance</div>
+                        </div>
+                    </div>
+
+                    <!-- Pending Approval -->
+                    <div class="o_pcd_kpi_card o_pcd_kpi_yellow" t-on-click="() => this.openRequests([['state','=','submitted']])">
+                        <div class="o_pcd_kpi_icon">
+                            <i class="fa fa-clock-o"/>
+                        </div>
+                        <div class="o_pcd_kpi_content">
+                            <div class="o_pcd_kpi_value">
+                                <t t-esc="state.data.requests_submitted || 0"/>
+                            </div>
+                            <div class="o_pcd_kpi_label">Pending Approval</div>
+                        </div>
+                    </div>
+
+                    <!-- Paid This Month -->
+                    <div class="o_pcd_kpi_card o_pcd_kpi_blue" t-on-click="() => this.openRequests([['state','=','paid']])">
+                        <div class="o_pcd_kpi_icon">
+                            <i class="fa fa-check-circle"/>
+                        </div>
+                        <div class="o_pcd_kpi_content">
+                            <div class="o_pcd_kpi_value">
+                                <t t-esc="state.data.requests_paid || 0"/>
+                            </div>
+                            <div class="o_pcd_kpi_label">Total Paid</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Middle Row: Status + Amounts + Quick Actions -->
+                <div class="o_pcd_middle_row">
+                    <!-- Request Status Breakdown -->
+                    <div class="o_pcd_panel">
+                        <h3 class="o_pcd_panel_title">
+                            <i class="fa fa-pie-chart"/> Request Status
+                        </h3>
+                        <div class="o_pcd_status_list">
+                            <div class="o_pcd_status_item" t-on-click="() => this.openRequests([['state','=','draft']])">
+                                <span class="o_pcd_status_badge badge-draft">Draft</span>
+                                <span class="o_pcd_status_count"><t t-esc="state.data.requests_draft || 0"/></span>
+                            </div>
+                            <div class="o_pcd_status_item" t-on-click="() => this.openRequests([['state','=','submitted']])">
+                                <span class="o_pcd_status_badge badge-submitted">Submitted</span>
+                                <span class="o_pcd_status_count"><t t-esc="state.data.requests_submitted || 0"/></span>
+                            </div>
+                            <div class="o_pcd_status_item" t-on-click="() => this.openRequests([['state','=','approved']])">
+                                <span class="o_pcd_status_badge badge-approved">Approved</span>
+                                <span class="o_pcd_status_count"><t t-esc="state.data.requests_approved || 0"/></span>
+                            </div>
+                            <div class="o_pcd_status_item" t-on-click="() => this.openRequests([['state','=','paid']])">
+                                <span class="o_pcd_status_badge badge-paid">Paid</span>
+                                <span class="o_pcd_status_count"><t t-esc="state.data.requests_paid || 0"/></span>
+                            </div>
+                            <div class="o_pcd_status_item" t-on-click="() => this.openRequests([['state','=','rejected']])">
+                                <span class="o_pcd_status_badge badge-rejected">Rejected</span>
+                                <span class="o_pcd_status_count"><t t-esc="state.data.requests_rejected || 0"/></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Monthly Summary -->
+                    <div class="o_pcd_panel">
+                        <h3 class="o_pcd_panel_title">
+                            <i class="fa fa-calendar"/> This Month
+                        </h3>
+                        <div class="o_pcd_month_summary">
+                            <div class="o_pcd_month_item">
+                                <div class="o_pcd_month_label">Total Requests</div>
+                                <div class="o_pcd_month_value">
+                                    <t t-esc="state.data.requests_this_month || 0"/>
+                                </div>
+                            </div>
+                            <div class="o_pcd_month_item">
+                                <div class="o_pcd_month_label">Amount Spent</div>
+                                <div class="o_pcd_month_value o_pcd_amount_large">
+                                    <t t-esc="this.formatAmount(state.data.amount_this_month, state.data.currency_symbol)"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Actions -->
+                    <div class="o_pcd_panel">
+                        <h3 class="o_pcd_panel_title">
+                            <i class="fa fa-bolt"/> Quick Actions
+                        </h3>
+                        <div class="o_pcd_actions">
+                            <button class="o_pcd_action_btn o_pcd_action_primary"
+                                t-on-click="() => this.openRequests([])">
+                                <i class="fa fa-plus"/> New Request
+                            </button>
+                            <button class="o_pcd_action_btn o_pcd_action_secondary"
+                                t-on-click="() => this.openFunds([])">
+                                <i class="fa fa-bank"/> Manage Funds
+                            </button>
+                            <button class="o_pcd_action_btn o_pcd_action_info"
+                                t-on-click="() => this.openRequests([['state','=','submitted']])">
+                                <i class="fa fa-check"/> Pending Approvals
+                            </button>
+                            <button class="o_pcd_action_btn o_pcd_action_neutral"
+                                t-on-click="() => this.openTransactions()">
+                                <i class="fa fa-list"/> All Transactions
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Requests Table -->
+                <div class="o_pcd_table_section">
+                    <div class="o_pcd_table_header">
+                        <h3 class="o_pcd_section_title">
+                            <i class="fa fa-file-text"/> Recent Requests
+                        </h3>
+                        <button class="o_pcd_view_all_btn" t-on-click="() => this.openRequests([])">
+                            View All <i class="fa fa-arrow-right"/>
+                        </button>
+                    </div>
+                    <div class="o_pcd_table_wrapper">
+                        <table class="o_pcd_table">
+                            <thead>
+                                <tr>
+                                    <th>Reference</th>
+                                    <th>Employee</th>
+                                    <th>Date</th>
+                                    <th>Purpose</th>
+                                    <th class="text-end">Amount</th>
+                                    <th class="text-center">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-if="state.data.recent_requests and state.data.recent_requests.length">
+                                    <t t-foreach="state.data.recent_requests" t-as="req" t-key="req.id">
+                                        <tr class="o_pcd_table_row" t-on-click="() => this.openRequest(req.id)">
+                                            <td class="o_pcd_ref">
+                                                <t t-esc="req.name"/>
+                                            </td>
+                                            <td><t t-esc="req.employee"/></td>
+                                            <td><t t-esc="req.date"/></td>
+                                            <td class="o_pcd_reason"><t t-esc="req.reason"/></td>
+                                            <td class="text-end o_pcd_amount_cell">
+                                                <t t-esc="req.currency_symbol"/>
+                                                <t t-esc="(req.amount || 0).toLocaleString('en-US', {minimumFractionDigits: 2})"/>
+                                            </td>
+                                            <td class="text-center">
+                                                <span t-attf-class="o_pcd_badge #{this.stateClass(req.state)}">
+                                                    <t t-esc="this.stateLabel(req.state)"/>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </t>
+                                <t t-else="">
+                                    <tr>
+                                        <td colspan="6" class="text-center text-muted o_pcd_empty">
+                                            <i class="fa fa-inbox fa-2x d-block mb-2"/>
+                                            No requests yet
+                                        </td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Recent Transactions Table -->
+                <div class="o_pcd_table_section">
+                    <div class="o_pcd_table_header">
+                        <h3 class="o_pcd_section_title">
+                            <i class="fa fa-exchange"/> Recent Transactions
+                        </h3>
+                        <button class="o_pcd_view_all_btn" t-on-click="() => this.openTransactions()">
+                            View All <i class="fa fa-arrow-right"/>
+                        </button>
+                    </div>
+                    <div class="o_pcd_table_wrapper">
+                        <table class="o_pcd_table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Description</th>
+                                    <th>Employee</th>
+                                    <th class="text-end text-success">Debit (In)</th>
+                                    <th class="text-end text-danger">Credit (Out)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-if="state.data.recent_transactions and state.data.recent_transactions.length">
+                                    <t t-foreach="state.data.recent_transactions" t-as="txn" t-key="txn.id">
+                                        <tr class="o_pcd_table_row">
+                                            <td><t t-esc="txn.date"/></td>
+                                            <td><t t-esc="txn.description"/></td>
+                                            <td><t t-esc="txn.employee"/></td>
+                                            <td class="text-end">
+                                                <t t-if="txn.debit > 0">
+                                                    <span class="text-success fw-bold">
+                                                        +<t t-esc="txn.currency_symbol"/>
+                                                        <t t-esc="(txn.debit || 0).toLocaleString('en-US', {minimumFractionDigits: 2})"/>
+                                                    </span>
+                                                </t>
+                                            </td>
+                                            <td class="text-end">
+                                                <t t-if="txn.credit > 0">
+                                                    <span class="text-danger fw-bold">
+                                                        -<t t-esc="txn.currency_symbol"/>
+                                                        <t t-esc="(txn.credit || 0).toLocaleString('en-US', {minimumFractionDigits: 2})"/>
+                                                    </span>
+                                                </t>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </t>
+                                <t t-else="">
+                                    <tr>
+                                        <td colspan="5" class="text-center text-muted o_pcd_empty">
+                                            <i class="fa fa-inbox fa-2x d-block mb-2"/>
+                                            No transactions yet
+                                        </td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </t>
+        </div>
+    </t>
+</templates>

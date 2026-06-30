@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Privilege (group category) for Petty Cash -->
+    <record model="res.groups.privilege" id="res_groups_privilege_petty_cash">
+        <field name="name">Petty Cash</field>
+        <field name="category_id" ref="base.module_category_accounting_accounting"/>
+        <field name="sequence">50</field>
+    </record>
+
+    <!-- User group -->
+    <record id="petty_cash_user_group" model="res.groups">
+        <field name="name">User</field>
+        <field name="privilege_id" ref="res_groups_privilege_petty_cash"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+
+    <!-- Manager group -->
+    <record id="petty_cash_manager_group" model="res.groups">
+        <field name="name">Manager</field>
+        <field name="privilege_id" ref="res_groups_privilege_petty_cash"/>
+        <field name="implied_ids" eval="[(4, ref('petty_cash_user_group'))]"/>
+    </record>
+</odoo>

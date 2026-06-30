@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_petty_cash_request_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <!-- Header -->
+                        <div class="row mb-4">
+                            <div class="col-12">
+                                <h2 class="text-center" style="color: #714B67; border-bottom: 2px solid #714B67; padding-bottom: 8px;">
+                                    Petty Cash Request
+                                </h2>
+                            </div>
+                        </div>
+
+                        <!-- Request Info -->
+                        <div class="row mb-3">
+                            <div class="col-6">
+                                <table class="table table-sm table-borderless">
+                                    <tr>
+                                        <td class="fw-bold" style="width: 40%;">Reference:</td>
+                                        <td><t t-esc="doc.name"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">Employee:</td>
+                                        <td><t t-esc="doc.employee_id.name"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">Fund:</td>
+                                        <td><t t-esc="doc.fund_id.name"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold">Request Date:</td>
+                                        <td><t t-esc="doc.date" t-options="{'widget': 'date'}"/></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="col-6">
+                                <table class="table table-sm table-borderless">
+                                    <tr>
+                                        <td class="fw-bold" style="width: 40%;">Status:</td>
+                                        <td>
+                                            <span t-attf-class="badge #{doc.state == 'paid' and 'bg-success' or doc.state == 'approved' and 'bg-primary' or doc.state == 'rejected' and 'bg-danger' or 'bg-warning'}">
+                                                <t t-esc="dict(doc.fields_get(['state'])['state']['selection'])[doc.state]"/>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr t-if="doc.approved_by">
+                                        <td class="fw-bold">Approved By:</td>
+                                        <td><t t-esc="doc.approved_by.name"/></td>
+                                    </tr>
+                                    <tr t-if="doc.approved_date">
+                                        <td class="fw-bold">Approval Date:</td>
+                                        <td><t t-esc="doc.approved_date" t-options="{'widget': 'datetime'}"/></td>
+                                    </tr>
+                                    <tr t-if="doc.paid_date">
+                                        <td class="fw-bold">Payment Date:</td>
+                                        <td><t t-esc="doc.paid_date" t-options="{'widget': 'date'}"/></td>
+                                    </tr>
+                                    <tr t-if="doc.move_id">
+                                        <td class="fw-bold">Journal Entry:</td>
+                                        <td><t t-esc="doc.move_id.name"/></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Amount -->
+                        <div class="row mb-4">
+                            <div class="col-12">
+                                <div class="card" style="border: 2px solid #714B67;">
+                                    <div class="card-body text-center">
+                                        <h3 style="color: #714B67; margin: 0;">
+                                            Amount Requested:
+                                            <strong>
+                                                <t t-esc="doc.currency_id.symbol"/>
+                                                <t t-esc="'{:,.2f}'.format(doc.amount)"/>
+                                            </strong>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Purpose -->
+                        <div class="row mb-4">
+                            <div class="col-12">
+                                <h5 style="color: #714B67;">Purpose / Reason</h5>
+                                <div class="border p-3 bg-light">
+                                    <t t-esc="doc.reason"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Rejection Reason -->
+                        <div class="row mb-4" t-if="doc.rejection_reason">
+                            <div class="col-12">
+                                <h5 style="color: #dc3545;">Rejection Reason</h5>
+                                <div class="border p-3 bg-light text-danger">
+                                    <t t-esc="doc.rejection_reason"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Signature Lines -->
+                        <div class="row mt-5">
+                            <div class="col-4 text-center">
+                                <div style="border-top: 1px solid #333; margin-top: 40px; padding-top: 8px;">
+                                    <strong>Requested By</strong><br/>
+                                    <t t-esc="doc.employee_id.name"/>
+                                </div>
+                            </div>
+                            <div class="col-4 text-center">
+                                <div style="border-top: 1px solid #333; margin-top: 40px; padding-top: 8px;">
+                                    <strong>Approved By</strong><br/>
+                                    <t t-if="doc.approved_by">
+                                        <t t-esc="doc.approved_by.name"/>
+                                    </t>
+                                    <t t-else="">
+                                        _____________________
+                                    </t>
+                                </div>
+                            </div>
+                            <div class="col-4 text-center">
+                                <div style="border-top: 1px solid #333; margin-top: 40px; padding-top: 8px;">
+                                    <strong>Paid By</strong><br/>
+                                    _____________________
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

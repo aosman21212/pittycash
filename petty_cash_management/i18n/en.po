@@ -1,0 +1,315 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * petty_cash_management
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2024-01-01 00:00+0000\n"
+"Last-Translator: LeapAI\n"
+"Language-Team: English\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. module: petty_cash_management
+msgid "Petty Cash Management"
+msgstr "Petty Cash Management"
+
+#. module: petty_cash_management
+msgid "Petty Cash Fund"
+msgstr "Petty Cash Fund"
+
+#. module: petty_cash_management
+msgid "Fund Name"
+msgstr "Fund Name"
+
+#. module: petty_cash_management
+msgid "Employee"
+msgstr "Employee"
+
+#. module: petty_cash_management
+msgid "Cash Account"
+msgstr "Cash Account"
+
+#. module: petty_cash_management
+msgid "Cash Journal"
+msgstr "Cash Journal"
+
+#. module: petty_cash_management
+msgid "Initial Balance"
+msgstr "Initial Balance"
+
+#. module: petty_cash_management
+msgid "Current Balance"
+msgstr "Current Balance"
+
+#. module: petty_cash_management
+msgid "Currency"
+msgstr "Currency"
+
+#. module: petty_cash_management
+msgid "Status"
+msgstr "Status"
+
+#. module: petty_cash_management
+msgid "Active"
+msgstr "Active"
+
+#. module: petty_cash_management
+msgid "Inactive"
+msgstr "Inactive"
+
+#. module: petty_cash_management
+msgid "Requests"
+msgstr "Requests"
+
+#. module: petty_cash_management
+msgid "Transactions"
+msgstr "Transactions"
+
+#. module: petty_cash_management
+msgid "Notes"
+msgstr "Notes"
+
+#. module: petty_cash_management
+msgid "Setup Fund"
+msgstr "Setup Fund"
+
+#. module: petty_cash_management
+msgid "Fund Setup Complete"
+msgstr "Fund Setup Complete"
+
+#. module: petty_cash_management
+msgid "Petty cash account and journal have been created successfully."
+msgstr "Petty cash account and journal have been created successfully."
+
+#. module: petty_cash_management
+msgid "Initial Balance"
+msgstr "Initial Balance"
+
+#. module: petty_cash_management
+msgid "Petty Cash Request"
+msgstr "Petty Cash Request"
+
+#. module: petty_cash_management
+msgid "Reference"
+msgstr "Reference"
+
+#. module: petty_cash_management
+msgid "Request Date"
+msgstr "Request Date"
+
+#. module: petty_cash_management
+msgid "Amount"
+msgstr "Amount"
+
+#. module: petty_cash_management
+msgid "Purpose / Reason"
+msgstr "Purpose / Reason"
+
+#. module: petty_cash_management
+msgid "Draft"
+msgstr "Draft"
+
+#. module: petty_cash_management
+msgid "Submitted"
+msgstr "Submitted"
+
+#. module: petty_cash_management
+msgid "Approved"
+msgstr "Approved"
+
+#. module: petty_cash_management
+msgid "Paid"
+msgstr "Paid"
+
+#. module: petty_cash_management
+msgid "Rejected"
+msgstr "Rejected"
+
+#. module: petty_cash_management
+msgid "Approved By"
+msgstr "Approved By"
+
+#. module: petty_cash_management
+msgid "Approval Date"
+msgstr "Approval Date"
+
+#. module: petty_cash_management
+msgid "Payment Date"
+msgstr "Payment Date"
+
+#. module: petty_cash_management
+msgid "Journal Entry"
+msgstr "Journal Entry"
+
+#. module: petty_cash_management
+msgid "Internal Notes"
+msgstr "Internal Notes"
+
+#. module: petty_cash_management
+msgid "Rejection Reason"
+msgstr "Rejection Reason"
+
+#. module: petty_cash_management
+msgid "Fund Balance"
+msgstr "Fund Balance"
+
+#. module: petty_cash_management
+msgid "Submit"
+msgstr "Submit"
+
+#. module: petty_cash_management
+msgid "Approve"
+msgstr "Approve"
+
+#. module: petty_cash_management
+msgid "Mark as Paid"
+msgstr "Mark as Paid"
+
+#. module: petty_cash_management
+msgid "Reject"
+msgstr "Reject"
+
+#. module: petty_cash_management
+msgid "Reset to Draft"
+msgstr "Reset to Draft"
+
+#. module: petty_cash_management
+msgid "Amount must be greater than zero."
+msgstr "Amount must be greater than zero."
+
+#. module: petty_cash_management
+msgid "Please complete the fund setup first (create account and journal)."
+msgstr "Please complete the fund setup first (create account and journal)."
+
+#. module: petty_cash_management
+msgid "Petty Cash Transaction"
+msgstr "Petty Cash Transaction"
+
+#. module: petty_cash_management
+msgid "Date"
+msgstr "Date"
+
+#. module: petty_cash_management
+msgid "Description"
+msgstr "Description"
+
+#. module: petty_cash_management
+msgid "Debit (In)"
+msgstr "Debit (In)"
+
+#. module: petty_cash_management
+msgid "Credit (Out)"
+msgstr "Credit (Out)"
+
+#. module: petty_cash_management
+msgid "Balance"
+msgstr "Balance"
+
+#. module: petty_cash_management
+msgid "Petty Cash Funds"
+msgstr "Petty Cash Funds"
+
+#. module: petty_cash_management
+msgid "Has Petty Cash Fund"
+msgstr "Has Petty Cash Fund"
+
+#. module: petty_cash_management
+msgid "Petty Cash Setup"
+msgstr "Petty Cash Setup"
+
+#. module: petty_cash_management
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#. module: petty_cash_management
+msgid "My Requests"
+msgstr "My Requests"
+
+#. module: petty_cash_management
+msgid "All Requests"
+msgstr "All Requests"
+
+#. module: petty_cash_management
+msgid "Cash Funds"
+msgstr "Cash Funds"
+
+#. module: petty_cash_management
+msgid "Configuration"
+msgstr "Configuration"
+
+#. module: petty_cash_management
+msgid "Settings"
+msgstr "Settings"
+
+#. module: petty_cash_management
+#. odoo-javascript
+msgid "Petty Cash Dashboard"
+msgstr "Petty Cash Dashboard"
+
+#. module: petty_cash_management
+#. odoo-javascript
+msgid "Petty Cash Requests"
+msgstr "Petty Cash Requests"
+
+#. module: petty_cash_management
+#. odoo-javascript
+msgid "Petty Cash Funds"
+msgstr "Petty Cash Funds"
+
+#. module: petty_cash_management
+#. odoo-javascript
+msgid "Active Funds"
+msgstr "Active Funds"
+
+#. module: petty_cash_management
+#. odoo-javascript
+msgid "Total Balance"
+msgstr "Total Balance"
+
+#. module: petty_cash_management
+#. odoo-javascript
+msgid "Pending Approval"
+msgstr "Pending Approval"
+
+#. module: petty_cash_management
+#. odoo-javascript
+msgid "Total Paid"
+msgstr "Total Paid"
+
+#. module: petty_cash_management
+#. odoo-javascript
+msgid "Request Status"
+msgstr "Request Status"
+
+#. module: petty_cash_management
+#. odoo-javascript
+msgid "This Month"
+msgstr "This Month"
+
+#. module: petty_cash_management
+#. odoo-javascript
+msgid "Quick Actions"
+msgstr "Quick Actions"
+
+#. module: petty_cash_management
+#. odoo-javascript
+msgid "Recent Requests"
+msgstr "Recent Requests"
+
+#. module: petty_cash_management
+#. odoo-javascript
+msgid "Recent Transactions"
+msgstr "Recent Transactions"
+
+#. module: petty_cash_management
+msgid "Petty Cash / Manager"
+msgstr "Petty Cash / Manager"
+
+#. module: petty_cash_management
+msgid "Petty Cash / User"
+msgstr "Petty Cash / User"

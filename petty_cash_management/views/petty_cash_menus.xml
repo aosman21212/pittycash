@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Root menu -->
+    <menuitem id="menu_petty_cash_root" name="Petty Cash" sequence="85"
+        web_icon="petty_cash_management,static/description/icon.png"/>
+
+    <!-- Level 1 -->
+    <menuitem id="menu_petty_cash_dashboard" name="Dashboard"
+        parent="menu_petty_cash_root"
+        action="action_petty_cash_dashboard"
+        sequence="1"/>
+
+    <menuitem id="menu_petty_cash_requests_root" name="Requests"
+        parent="menu_petty_cash_root"
+        sequence="2"/>
+
+    <menuitem id="menu_petty_cash_funds_root" name="Funds"
+        parent="menu_petty_cash_root"
+        sequence="3"/>
+
+    <menuitem id="menu_petty_cash_config_root" name="Configuration"
+        parent="menu_petty_cash_root"
+        sequence="10"/>
+
+    <!-- Requests submenu -->
+    <menuitem id="menu_my_petty_cash_requests" name="My Requests"
+        parent="menu_petty_cash_requests_root"
+        action="action_petty_cash_request_my"
+        sequence="1"/>
+
+    <menuitem id="menu_all_petty_cash_requests" name="All Requests"
+        parent="menu_petty_cash_requests_root"
+        action="action_petty_cash_request_all"
+        sequence="2"
+        groups="petty_cash_management.petty_cash_manager_group"/>
+
+    <!-- Funds submenu -->
+    <menuitem id="menu_petty_cash_funds" name="Cash Funds"
+        parent="menu_petty_cash_funds_root"
+        action="action_petty_cash_fund"
+        sequence="1"
+        groups="petty_cash_management.petty_cash_manager_group"/>
+
+    <menuitem id="menu_petty_cash_transactions" name="Transactions"
+        parent="menu_petty_cash_funds_root"
+        action="action_petty_cash_transaction"
+        sequence="2"/>
+
+    <!-- Config -->
+    <menuitem id="menu_petty_cash_config" name="Settings"
+        parent="menu_petty_cash_config_root"
+        action="action_petty_cash_fund"
+        sequence="1"
+        groups="petty_cash_management.petty_cash_manager_group"/>
+</odoo>

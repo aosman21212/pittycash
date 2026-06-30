@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_petty_cash_reject_wizard_form" model="ir.ui.view">
+        <field name="name">petty.cash.reject.wizard.form</field>
+        <field name="model">petty.cash.reject.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Reject Petty Cash Request">
+                <group>
+                    <field name="request_id" readonly="1"/>
+                    <field name="rejection_reason" required="1" placeholder="Enter the reason for rejection..."/>
+                </group>
+                <footer>
+                    <button name="action_reject" string="Reject Request" type="object" class="btn-danger"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

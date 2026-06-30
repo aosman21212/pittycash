@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_report_petty_cash_request" model="ir.actions.report">
+        <field name="name">Petty Cash Request</field>
+        <field name="model">petty.cash.request</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">petty_cash_management.report_petty_cash_request_template</field>
+        <field name="report_file">petty_cash_management.report_petty_cash_request_template</field>
+        <field name="binding_model_id" ref="model_petty_cash_request"/>
+        <field name="binding_type">report</field>
+        <field name="paperformat_id" ref="base.paperformat_euro"/>
+    </record>
+</odoo>

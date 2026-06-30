@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Form View -->
+    <record id="view_petty_cash_fund_form" model="ir.ui.view">
+        <field name="name">petty.cash.fund.form</field>
+        <field name="model">petty.cash.fund</field>
+        <field name="arch" type="xml">
+            <form string="Petty Cash Fund">
+                <header>
+                    <button name="action_setup_fund" string="Setup Fund" type="object"
+                        class="btn-primary"
+                        invisible="account_id and journal_id"/>
+                    <button name="action_set_inactive" string="Set Inactive" type="object"
+                        invisible="state != 'active'"/>
+                    <button name="action_set_active" string="Set Active" type="object"
+                        invisible="state != 'inactive'"/>
+                    <field name="state" widget="statusbar" statusbar_visible="active,inactive"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_requests" type="object" class="oe_stat_button" icon="fa-list">
+                            <field name="request_count" widget="statinfo" string="Requests"/>
+                        </button>
+                        <button name="action_view_transactions" type="object" class="oe_stat_button" icon="fa-exchange">
+                            <field name="transaction_count" widget="statinfo" string="Transactions"/>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" placeholder="Fund Name..."/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group string="Fund Information">
+                            <field name="employee_id"/>
+                            <field name="currency_id"/>
+                            <field name="initial_balance"/>
+                            <field name="current_balance" widget="monetary"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                        </group>
+                        <group string="Accounting">
+                            <field name="account_id" readonly="account_id != False"/>
+                            <field name="journal_id" readonly="journal_id != False"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Transactions" name="transactions">
+                            <field name="transaction_ids" readonly="1">
+                                <list string="Transactions" decoration-success="debit > 0" decoration-danger="credit > 0">
+                                    <field name="date"/>
+                                    <field name="description"/>
+                                    <field name="debit" sum="Total Debit"/>
+                                    <field name="credit" sum="Total Credit"/>
+                                    <field name="balance"/>
+                                    <field name="currency_id" column_invisible="True"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Notes" name="notes">
+                            <field name="notes" placeholder="Add notes here..."/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <!-- List View -->
+    <record id="view_petty_cash_fund_list" model="ir.ui.view">
+        <field name="name">petty.cash.fund.list</field>
+        <field name="model">petty.cash.fund</field>
+        <field name="arch" type="xml">
+            <list string="Petty Cash Funds" decoration-muted="state == 'inactive'">
+                <field name="name"/>
+                <field name="employee_id"/>
+                <field name="initial_balance"/>
+                <field name="current_balance"/>
+                <field name="currency_id" optional="hide"/>
+                <field name="request_count"/>
+                <field name="state" widget="badge" decoration-success="state == 'active'" decoration-danger="state == 'inactive'"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Search View -->
+    <record id="view_petty_cash_fund_search" model="ir.ui.view">
+        <field name="name">petty.cash.fund.search</field>
+        <field name="model">petty.cash.fund</field>
+        <field name="arch" type="xml">
+            <search string="Petty Cash Funds">
+                <field name="name"/>
+                <field name="employee_id"/>
+                <filter string="Active" name="active" domain="[('state', '=', 'active')]"/>
+                <filter string="Inactive" name="inactive" domain="[('state', '=', 'inactive')]"/>
+                <group>
+                    <filter string="Employee" name="group_employee" domain="[]" context="{'group_by': 'employee_id'}"/>
+                    <filter string="Status" name="group_state" domain="[]" context="{'group_by': 'state'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_petty_cash_fund" model="ir.actions.act_window">
+        <field name="name">Petty Cash Funds</field>
+        <field name="res_model">petty.cash.fund</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="view_petty_cash_fund_search"/>
+        <field name="context">{'search_default_active': 1}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first Petty Cash Fund
+            </p>
+            <p>
+                Set up petty cash funds for employees and manage their cash flow efficiently.
+            </p>
+        </field>
+    </record>
+</odoo>
