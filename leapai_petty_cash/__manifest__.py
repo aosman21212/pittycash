@@ -3,8 +3,8 @@
     'version': '19.0.1.0.1',
     'summary': 'Manage petty cash funds for employees with full accounting integration',
     'description': 'Complete petty cash management with fund setup, request workflow, approval, payment, and transaction ledger.',
-    'author': 'LeapAI',
-    'website': 'https://leapai.com',
+    'author': 'leapai.ai',
+    'website': 'https://leapai.ai',
     'category': 'Accounting/Accounting',
     'license': 'LGPL-3',
     'images': [
