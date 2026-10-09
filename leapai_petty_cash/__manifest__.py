@@ -1,9 +1,23 @@
+# -*- coding: utf-8 -*-
+# =============================================================================
+#  Petty Cash Management
+# -----------------------------------------------------------------------------
+#  Location  : King Abdulaziz Branch Road, Riyadh, Saudi Arabia
+#  Email     : sales@leapai.ai
+#  Phone     : +966 53 553 3627
+#  Website   : https://leapai.ai
+#  Developer : Abdulkaraim Osman — Tech Manager | Backend Engineer | DevOps Engineer
+#              at Bab International Corp For Specialized Services
+#  LinkedIn  : https://www.linkedin.com/in/abdulkaraim-o-385b7a110/
+# =============================================================================
 {
     'name': 'Petty Cash Management',
     'version': '19.0.1.0.1',
     'summary': 'Manage petty cash funds for employees with full accounting integration',
     'description': 'Complete petty cash management with fund setup, request workflow, approval, payment, and transaction ledger.',
     'author': 'leapai.ai',
+    'maintainer': 'Abdulkaraim Osman',
+    'support': 'sales@leapai.ai',
     'website': 'https://leapai.ai',
     'category': 'Accounting/Accounting',
     'license': 'LGPL-3',
