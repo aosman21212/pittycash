@@ -1,9 +1,4 @@
-{
-    'name': 'Petty Cash Management',
-    'version': '19.0.1.0.1',
-    'summary': 'Manage petty cash funds for employees with full accounting integration',
-    'description': 'Complete petty cash management with fund setup, request workflow, approval, payment, and transaction ledger.',
-    'author': 'leapai.ai',# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 # =============================================================================
 #  Petty Cash Management
 # -----------------------------------------------------------------------------
@@ -23,43 +18,6 @@
     'author': 'leapai.ai',
     'maintainer': 'Abdulkaraim Osman',
     'support': 'sales@leapai.ai',
-    'website': 'https://leapai.ai',
-    'category': 'Accounting/Accounting',
-    'license': 'LGPL-3',
-    'images': [
-        'static/description/banner.png',
-        'static/description/icon.png',
-        'static/description/main_screenshot.png',
-        'static/description/screenshot.png',
-    ],
-    'depends': ['account', 'hr', 'mail'],
-    'data': [
-        'security/petty_cash_security.xml',
-        'security/ir.model.access.csv',
-        'data/petty_cash_sequence.xml',
-        'views/petty_cash_fund_views.xml',
-        'views/petty_cash_request_views.xml',
-        'views/petty_cash_transaction_views.xml',
-        'views/hr_employee_views.xml',
-        'views/petty_cash_dashboard_views.xml',
-        'views/petty_cash_menus.xml',
-        'report/petty_cash_report.xml',
-        'report/petty_cash_report_template.xml',
-        'wizard/petty_cash_reject_wizard_views.xml',
-    ],
-    'assets': {
-        'web.assets_backend': [
-            'leapai_petty_cash/static/src/components/dashboard/dashboard.js',
-            'leapai_petty_cash/static/src/components/dashboard/dashboard.xml',
-            'leapai_petty_cash/static/src/components/dashboard/dashboard.scss',
-        ],
-    },
-    'demo': ['demo/petty_cash_demo.xml'],
-    'installable': True,
-    'application': True,
-    'auto_install': False,
-}
-
     'website': 'https://leapai.ai',
     'category': 'Accounting/Accounting',
     'license': 'LGPL-3',
